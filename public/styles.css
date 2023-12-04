@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap');*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 15%;
+    font-family: 'Montserrat', sans-serif;
+}
+h3{
+    font-size: 1.5rem;
+    color: rgba(56,56,56);
+    line-height: 2.5rem;
+    margin: 2rem 0;
+}
+h4{
+    font-size: 1.2rem;
+    color: rgba(56,56,56);
+}
+a{
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+}
+.popular-container{
+    margin: 4rem 0;
+}
+.non-carousel{
+    display: none;
+}
+@media (max-width:800px) {
+    .non-carousel{
+        display: contents;
+    }
+    .carousel{
+        display: none;
+    }
+    .card{
+        margin-bottom: 3rem;
+    }
+}
+.card{
+    min-height: 20rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    position: relative;
+}
+.card:hover{
+    opacity: 0.8;
+}
+
+.card img{
+    border-radius: 2rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+}
+.card h4{
+    position: absolute;
+    color: azure;
+    bottom: 0%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%,0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 40%;
+}
+/* .card h4:hover{
+    background-color: rgba(232, 232, 232, 0.325);
+    color: rgba(0, 0, 0, 0.674);
+    cursor: pointer;
+} */
+.card .gradient{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+
+/* Category Page */
+
+.category-section{
+    display: flex;
+    margin: 2rem auto;
+    justify-content: center;
+}
+.category{
+    text-align: center;
+    margin-left: 2.5rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.category-icon{
+    background: rgba(56, 56, 56, 0.866);
+    color: azure;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.category-icon:active{
+    background: linear-gradient(to right,#f27121,#e94057);
+    color:white;
+}
+
+/* .category-icon a{
+    height: 100%;
+    width: 100%;
+   position: absolute;
+   left: 50%;
+   bottom: 50%;
+} */
+.category h4{
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+/* Cuisine page */
+
+.cuisine-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+    gap: 3rem;
+}
+.cuisine img{
+    width: 100%;
+    border-radius: 2rem;
+}
+.cuisine a{
+    text-decoration: none;
+}
+.cuisine h4{
+   text-align: center;
+   padding: 1rem;
+}
+.cuisine :hover{
+    opacity: 0.8;
+}
+
+/* SEARCH FORM */
+.search-container{
+    margin: 0 3rem;
+    display: flex;
+    justify-content: center;
+}
+.search-form{
+    width: 80%;
+    position: relative;
+    min-width: 500px;
+}
+.search-form input{
+    background: rgba(56, 56, 56, 0.866);
+    color: azure;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 1.2rem;
+    outline: none;
+    width: 100%;
+    border: none;
+}
+.search-form svg{
+    position: absolute;
+    top:50%;
+    left: 0;
+    transform: translate(100%,-50%);
+    color: white;
+}
+@media (max-width:900px) {
+  .search-form{
+    width: 80%;
+    position: relative;
+    min-width: 300px;
+  }
+}
+
+/* searched container */
+
+.searched-container{
+    text-align: center;
+}
+.search-cuisines{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 3rem;
+}
+.search-item img{
+    width: 100%;
+    border-radius: 2rem;
+}
+.search-item a{
+    text-decoration: none;
+}
+.search-item h4{
+   text-align: center;
+   padding: 1rem;
+}
+.search-item :hover{
+    opacity: 0.8;
+}
+
+/* Recipe page */
+
+.recipe-container{
+    display: flex;
+    gap: 2rem;
+    padding: 5rem 0;
+}
+.recipe-img img{
+    max-width: 30rem;
+    border-radius: 2rem;
+}
+.recipe-button button{
+    padding :1rem 3rem;
+    margin-right: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.recipe-button .active{
+    background-color: rgba(0, 0, 0, 0.875);
+    color: rgba(255, 255, 255, 0.759);
+}
+.recipe-info{
+    margin-top: 3rem;
+}
+.recipe-info h3{
+    font-size: 1.3rem;
+    line-height: 1.3em;
+}
+@media (max-width:900px) {
+    .recipe-container{
+        display: block;
+    }
+    .recipe-img{
+        width: 80vw;
+        margin-bottom: 3rem;
+    }
+    .recipe-img img{
+        width: 100%;
+    }
+    .recipe-button button{
+        padding: 0.8rem 1.5rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* LOGO */
+
+.navbar{
+    display: flex;
+    justify-content: flex-start;
+    padding: 3rem 2rem;
+}
+.logo{
+    display: flex;
+    gap: 1.2rem;
+    font-family: 'Lobster', cursive;
+}
+.logo svg{
+    font-size: 2rem;
+}
+.logo p{
+    font-size: 1.5rem;
+}
+@media (max-width:900px) {
+    .navbar{
+        justify-content: center;
+    }
+   .flex{
+    display: flex;
+   }
+    
+}
